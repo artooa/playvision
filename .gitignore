@@ -1,0 +1,9 @@
+logs
+target/
+target
+.history#*
+*.class
+
+*.log
+.git/
+.DS_Store
