@@ -1,0 +1,20 @@
+==========
+PLAYVISION
+==========
+
+A Playframework starter kit.
+
+To get going:
+
+* install sbt 0.11.12  if you do not have it already. 
+
+* execute 'sbt' and then `help play` for play specific commands
+
+* execute `sbt` and then `compile` to build the project
+
+* execute `sbt` and then 'run' to run the built-in development server
+
+* onece the development server is running, documentation is available at http://localhost:9000/@documentation
+
+
+

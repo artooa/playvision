@@ -1,0 +1,54 @@
+@()(implicit l: Lang)
+<hr>
+<footer>
+
+	<div class="row">
+
+		<div class="span4">
+			<strong>Artooa PLAYVISION</strong><br />
+			Schützengasse 38c<br />
+			2502 Biel/Bienne<br />
+			Switzerland <br />
+			<a href="mailto:info@@artooa.ch">info@@artooa.ch</a>
+			<br/>
+			<br/>
+			<strong>@Messages("footer.donations")</strong> <br />
+			TODO<br/>
+			Flattr<br>
+			<br />
+		</div><!-- span4 -->
+
+		<div class="span4">
+			<a href="@routes.Contacts.form">@Messages("menu.contact")</a>
+			<br>
+			
+			
+			&copy; Artooa GmbH 2012 - 2016<br/>
+			<br>
+			<a href="mailto:info@@artooa.ch"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/mail.png")" width="15px" alt="info < at > artooa.ch"></a>
+			<a href="http://blog.artooa.ch/" target="_blank"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/tumblr.png")" width="15px" alt="blog.artooa.ch"></a>
+			<a href="https://www.facebook.com/artooa/" target="_blank"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/fb.png")" width="15px" alt="facebook.com/PLAYVISION"></a>
+			<a href="https://twitter.com/artooa_inc" target="_blank"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/twitter.png")" width="15px" alt="twitter.com/playvision"></a>
+			<a href="http://youtu.be/" target="_blank"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/youtube.png")" width="15px" alt="Youtube Video Channel"></a>
+			<a href="https://plus.google.com/" target="_blank"><img class="img-rounded" src="@routes.Assets.at("images/social-icons/gplus.png")" width="15px" alt="Google+ PLAYVISION"></a>
+			<br>
+			<br>
+			@("PLAYVISION %s %s" format (models.Infos.GIT_TAG, l.code))  <br>
+			Powered by <a href="http://www.scala-lang.org/">Scala </a>  and
+			<a href="http://www.playframework.org/">Play Framework</a> 
+			<br />
+			dev & design <a href="http://www.artooa.ch/"><img class="img-rounded" src="@routes.Assets.at("images/logo-artooa-545ca5.png")" width="60px" alt="www.artooa.ch"></a>
+
+		</div> <!-- span4 -->
+
+		<div class="span4">
+			<br>
+			<img
+				src="@routes.Assets.at("images/playvision-logo.png")"
+				class="img-rounded pull-right" width="200" alt="PLAYVISION" />
+
+		</div><!-- span4 -->
+	</div> <!-- row -->
+	 <br><br><br>
+
+</footer>

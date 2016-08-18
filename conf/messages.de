@@ -1,0 +1,97 @@
+# Default messages
+
+# --- Constraints
+constraint.required=Required
+constraint.min=Minimum value: {0}
+constraint.max=Maximum value: {0}
+constraint.minLength=Minimum length: {0}
+constraint.maxLength=Maximum length: {0}
+constraint.email=Email
+
+# --- Formats
+format.date=Date (''{0}'')
+format.numeric=Numeric
+
+# --- Errors
+error.invalid=Invalid value
+error.required = Dies ist ein Pflichtfeld
+error.number=Numeric value expected
+error.min=Must be greater or equal to {0}
+error.max=Must be less or equal to {0}
+error.minLength=Minimum length is {0}
+error.maxLength=Maximum length is {0}
+error.email= Die E-Mail Adresse ist ungültig
+error.pattern=Must satisfy {0}
+
+#MENU
+menu.home = Home
+menu.offer = Unser Angebot
+menu.producers = Produzenten
+menu.more = Mehr
+menu.contact = Kontakt
+menu.login = Anmelden
+
+#BUTTONS
+cancel = Abbrechen
+create = Erfassen
+remove = Entfernen
+or = oder
+hide = Verstecken
+yes = Ja
+no = Nein
+ok = OK
+valid.input.field = Eine gültige {0} ist erforderlich
+
+btn.basket = Korb der Woche
+btn.participation = Ich will mitmachen
+btn.subscription.order = Abo bestellen
+btn.meet.them = Kennenlernen
+btn.goto.subscribe = Zur Anmeldung
+btn.back = Zurück
+btn.more.news = Mehr Infos
+
+#FORM
+form.input.warning = Achtung: 
+form.input.warning.text = Bitte prüfen Sie nochmals die Eingaben
+form.intro = Ich möchte bei PLAYVISION mitmachen. 
+form.info.more = Bitte schicken Sie mir Informationen zu den Aktivitäten von PLAYVISION. 
+#form.info.maillinglist
+form.info.join = Ja, ich möchte bei PLAYVISIOIN mitmachen.
+form.info.callme = Bitte nehmen Sie mit mir Kontakt auf. 
+
+form.label.firstname = Vorname
+form.label.lastname = Nachname
+form.label.email = E-Mail
+form.label.email.example = ich@beispiel.ch
+form.label.phone = Telefonnummer
+form.label.company = Firma (optional)
+form.label.address = Strasse Nr.
+form.label.postalcode = Postleitzahl
+form.label.city = Ort
+form.label.country = Land
+form.label.remark = Bemerkung
+
+form.sum.title = Danke für Ihre Anfrage
+
+form.fix.errors = Oui. Bitte korrigieren Sie die Fehler im Formular
+
+#FOOTER
+footer.donations = Für Spenden, Beiträge:
+
+#LANG
+languages = Langue
+lang.en = English
+lang.fr = Français
+lang.de = Deutsch
+
+# MISC
+not.found = Page non trouvée
+page.not.found = La page demandée n’a pas pu être trouvée.
+
+internal.error = Erreur interne. Il n’y a rien à faire…
+
+
+user.name = Votre nom
+user.name.hint = Vous devez indiquer votre nom pour enregistrer votre vote
+see.current.result = Voir le résultat du sondage
+vote.registered=Votre vote a bien été pris en compte

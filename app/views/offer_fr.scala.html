@@ -1,0 +1,90 @@
+@(active: String)(implicit l: Lang)
+
+@main(active, active) {
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+	<div class="row">
+		<div class="span8">
+			<h2>Aujourd'hui frais</h2>
+			<p>Sed quis malesuada sem, eget suscipit nisl. Sed tincidunt massa ante, ac tristique eros tincidunt non. 
+			</p>
+			
+		</div>
+
+		<div class="span2">
+			<img src="http://placehold.it/100x200" class="img-rounded pull-right" alt="PLAYVISION" />
+		</div>
+		<!-- span4 -->
+
+	</div>
+	<!-- row -->
+</div>
+<!-- hero -->
+
+
+
+
+<!-- Example row of columns -->
+<div class="row">
+	<div class="span4">
+		h2>In id varius elit. </h2>
+		<p>
+			Nullam eu lacus odio. Vivamus iaculis, lacus eu mattis ultricies, tortor nibh pharetra ligula, vel pretium sapien leo sit amet velit. Mauris euismod scelerisque neque. In id nibh non velit pretium pretium.
+		</p>
+		<<br>
+		<p>
+		<a class="btn" href="@routes.Contacts.form">@Messages("btn.subscription.order") &raquo;</a>
+		</p>
+
+				<br>
+		<br>
+		<div class="well">
+			<h3>PLAYVISION, un engagement qui a du sens</h3>
+				<ul>
+				<li>Encouragement de la solidarité et du dialogue entre les producteurs et les consommateurs </li>
+				<li>Certitude sur l'origine des produits</li>
+				<li>Dépense d'énergie minimale grâce à une production saisonnière et des trajets de transport courts</li>
+				<li>Réduction de la consommation d'emballages</li>
+				<li>Pas d’intermédiaires commerciaux</li>
+				<li>Promotion d’une production régionale respectueuse de l’environnement</li>
+				<li>Des conditions de travail équitables
+				</ul>
+		</div>
+		
+	</div>
+
+	<div class="span4">
+		<h2>Nos producteurs</h2>
+		<p>
+		In id varius elit. Nullam eu lacus odio. Vivamus iaculis, lacus eu mattis ultricies, tortor nibh pharetra ligula, vel pretium sapien leo sit amet velit. Mauris euismod scelerisque neque. In id nibh non velit pretium pretium. Sed faucibus quis augue et tincidunt. Suspendisse laoreet nibh eget libero sollicitudin elementum. Proin sapien nulla, rutrum id tincidunt eu, semper eget elit. Morbi posuere maximus sapien, sit amet placerat sem pulvinar et. Vivamus et ex orci. In luctus odio a risus faucibus, ac luctus quam dictum. Praesent sollicitudin justo sit amet ligula commodo porttitor. Curabitur eu placerat eros. Nam lorem lacus, luctus in suscipit in, commodo vitae risus.
+		</p>
+		<p>
+			<a class="btn" href="@routes.App.producers">@Messages("btn.meet.them") &raquo;</a>
+		</p>
+		<br>
+		
+	</div>
+
+	<div class="span4">
+		<h2>Participer</h2>
+
+		<p>
+			Sed quis malesuada sem, eget suscipit nisl. Sed tincidunt massa ante, ac tristique eros tincidunt non. Quisque nec pellentesque augue. Quisque non mauris massa. Nullam nunc purus, sodales at cursus at, vulputate scelerisque purus. Proin tincidunt ante condimentum felis condimentum rhoncus. Aenean venenatis lacus at tellus sollicitudin, et hendrerit mauris interdum. Nunc a urna at arcu vehicula fringilla quis pretium magna. In eget placerat neque. Proin commodo pulvinar elit, mattis sollicitudin magna lobortis vel.
+		 </p>
+
+		<p>
+			<a class="btn" href="@routes.Contacts.form">@Messages("btn.goto.subscribe") &raquo;</a>
+		</p>
+
+
+	</div>
+	<!-- span4-->
+
+
+
+
+</div>
+<!-- row -->
+
+}

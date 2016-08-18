@@ -1,0 +1,250 @@
+@(contactForm: Form[Contact])(implicit flash: Flash, lang: Lang)
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main("title", "active") {
+    @*{nav = active}*@
+    
+    @helper.form(action = routes.Contacts.submit, 'class -> "form-horizontal") {
+    @contactForm.globalError.map { error =>
+            <span class="error">@error.message</span>
+            }
+<div class="hero-unit">
+    <h3>@Messages("form.intro")</h3>
+
+  <fieldset>
+  
+	<div class="control-group">
+		<div class="controls">
+		@*
+		<label class="checkbox">
+                @checkbox(
+                	contactForm("info.moreInfo"),
+                	'_label -> "",
+                	'_text -> Messages("form.info.more"),
+                	'_help -> ""
+                	)
+        </label>
+        *@
+		
+        @*
+        <label class="checkbox">
+               @checkbox(
+                	contactForm("info.maillinglist"),
+                	'_label -> "",
+                	'_text -> Messages("form.info.maillinglist"),
+                	'_help -> ""
+                	)
+        </label>
+        *@
+        <label class="checkbox">
+               @checkbox(
+                	contactForm("info.join"),
+                	'_label -> "",
+                	'_text -> Messages("form.info.join"),
+                	'_help -> ""
+                	)
+        </label>
+        <label class="checkbox">
+              @checkbox(
+                	contactForm("info.callme"),
+                	'_label -> "",
+                	'_text -> Messages("form.info.callme"),
+                	'_help -> ""
+                	)
+        </label>
+        
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+
+<div class="row">
+<div class="span12">
+ @if(contactForm.hasErrors) {
+        <div class="alert alert-info">
+            <p class="text-error"><strong>@Messages("form.input.warning") </strong>@Messages("form.input.warning.text") </p>
+        </div>
+    }
+    </div>
+  </div>
+    
+  <div class="row">
+  <div class="span6">
+      
+     <fieldset>
+       <div class="control-group">
+      <label class="control-label" for="firstname">@Messages("form.label.firstname")</label>
+        <div class="controls">
+            @inputText(
+                contactForm("firstname"), 
+             	'_label -> "",
+  				'placeholder -> Messages("form.label.firstname"),
+  				'_help -> "",
+  				'_showErrors -> true
+            )
+     </div>
+      </div>
+      
+      <div class="control-group">
+      <label class="control-label" for="lastname">@Messages("form.label.lastname")</label>
+        <div class="controls">
+         @inputText(
+                contactForm("lastname"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.lastname"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+         </div>
+       </div>
+
+      <div class="control-group">
+      <label class="control-label" for="email">@Messages("form.label.email")</label>
+        <div class="controls">            
+            @inputText(
+                contactForm("email"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.email.example"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+         </div>
+       </div>
+       
+      <div class="control-group">
+      <label class="control-label" for="phone">@Messages("form.label.phone")</label>
+        <div class="controls">            
+             @inputText(
+                contactForm("phone"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.phone"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+         </div>
+       </div>            
+
+        </fieldset>
+   </div>
+   <div class="span6">
+     <fieldset>
+
+ <div class="control-group">
+    <label class="control-label" for="company">@Messages("form.label.company")</label>
+    <div class="controls">
+    @inputText(
+                contactForm("company"), 
+                '_label -> "",
+                 'placeholder -> Messages("form.label.company"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+    </div>
+  </div>
+  
+  
+  <div class="control-group">
+    <label class="control-label" for="address">@Messages("form.label.address")</label>
+    <div class="controls">
+      @inputText(
+                contactForm("address"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.address"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+    </div>
+  </div>            
+            
+ <div class="control-group">
+    <label class="control-label" for="postalcode">@Messages("form.label.postalcode")</label>
+    <div class="controls">
+            @inputText(
+                contactForm("postalcode"), 
+                '_label -> "",
+                 'placeholder -> Messages("form.label.postalcode"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+     </div>
+     </div>
+                 
+ <div class="control-group">
+    <label class="control-label" for="city">@Messages("form.label.city")</label>
+    <div class="controls">
+             @inputText(
+                contactForm("city"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.city"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+       </div>
+     </div>
+               
+ <div class="control-group">
+    <label class="control-label" for="country">@Messages("form.label.country")</label>
+    <div class="controls">            
+            @inputText(
+                contactForm("country"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.country"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+     </div>
+     </div>
+      <div class="control-group">
+    <label class="control-label" for="remark">@Messages("form.label.remark")</label>
+    <div class="controls">            
+            @textarea(
+                contactForm("info.remark"), 
+                '_label -> "",
+                'placeholder -> Messages("form.label.remark"),
+                '_help -> "",
+  				'_showErrors -> true
+            )
+     </div>
+     </div>       
+ </fieldset>
+   
+   </div>     
+</div>        
+     <div class="control-group">
+       <div class="controls">
+        
+        <div class="actions">
+			<a href="@routes.App.home" class="btn">@Messages("cancel")</a>
+            <input type="submit" class="btn btn-primary" value=@Messages("ok")>
+        </div>
+      </div>
+    </div>
+        
+        @*
+        contactForm("firstname"), 
+                '_text -> "Vorname",
+                'id -> "firstname", 
+             	'size -> 50,
+             	'_label -> "in18n.firstname",
+  				'placeholder -> "ex. Bob Jones",
+  				Symbol("data-attribute") -> "myval",
+  				'_help -> "Dies ist der Hilfe Text",
+  				'_showConstraints -> false,
+				'_error -> "Force an error",
+				'_showErrors -> true
+				
+				official:
+				'_label -> "Custom label"
+				'_id -> "idForTheTopDlElement"
+				'_help -> "Custom help"
+				'_showConstraints -> false
+				'_error -> "Force an error"
+				'_showErrors -> false
+				
+        *@
+    }
+}

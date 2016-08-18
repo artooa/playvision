@@ -1,0 +1,57 @@
+@(active: String)(implicit l: Lang)
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</a>
+			 <a class="brand" href="@routes.App.home">PLAYVISION</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li @if(active == Menu.Home.toString){class="active"}><a href="@routes.App.home">@Messages("menu.home")</a></li>
+					<li @if(active == Menu.Offer.toString){class="active"}><a href="@routes.App.offer">@Messages("menu.offer")</a></li>
+					<li @if(active == Menu.Producers.toString){class="active"}><a href="@routes.App.producers">@Messages("menu.producers")</a></li>
+
+					
+					<ul class="nav">
+					  <li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Messages("menu.more")<span class="caret"></span></a>
+					    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					      <li><a href="@routes.Contacts.form">@Messages("menu.contact")</a></li>
+					      <li><a href="http://blog.artooa.ch/" target="_blank">Blog</a></li>
+					      <li class="divider"></li>
+					       @play.api.i18n.Lang.availables(play.api.Play.current).map { lang =>
+					        <li><a href="@routes.App.changeLocale(lang.code)">@Messages("lang." + lang.code)</a></li>
+					       }
+					       @* TODO
+					       <li class="divider"></li>
+					      <li><a href="#">@Messages("menu.login")</a></li>
+					      *@
+					    </ul>
+					  </li>
+					</ul>
+					
+				</ul>
+				@*
+				@helper.form(action = routes.App.changeLocale() /*, 'class -> "change-locale" */) {
+            <label>@Messages("languages")
+              <select name="locale">
+                @play.api.i18n.Lang.availables(play.api.Play.current).map { lang =>
+                  <option value="@lang.code" @(if(l.code == lang.code) "selected")>@Messages("lang." + lang.code)</option>
+                }
+              </select>
+            </label>
+          }
+          *@
+				@* //TODO: Search
+				<form class="navbar-search pull-right">
+					<input type="text" class="search-query" placeholder="Suche">
+				</form>
+				*@
+			</div> <!--/.nav-collapse -->
+		</div> <!-- container -->
+	</div> <!-- navbar-inner -->
+</div> <!-- navbar -->

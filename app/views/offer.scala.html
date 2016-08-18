@@ -1,0 +1,8 @@
+@(active: String)(implicit l: Lang)
+
+
+@{ l.code match {
+      	case "fr" => offer_fr(active)
+      	case _ 	=> offer_de(active)
+      	}
+}

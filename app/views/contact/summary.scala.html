@@ -1,0 +1,45 @@
+@(contact: Contact)(implicit flash: Flash, lang: Lang)
+
+@* main(Html("Contact created!"), nav = "contact") *@
+@main("Contact created!", "contact") {
+    <br>
+    <h3>@Messages("form.sum.title")</h3>
+    
+    <div class="well well-large">
+ 
+    <h4>@contact.firstname @contact.lastname</h4>
+    <p>
+      @contact.email.getOrElse { } 
+    </p>
+    <p>
+      @contact.phone
+    </p>
+    <p>
+      @contact.company.getOrElse {  } 
+    </p>
+    <p>
+      @contact.address<br>
+      @contact.postalcode @contact.city<br>
+      @contact.country.getOrElse("")
+</div>
+  
+        
+        <div class="well well-large">  
+     <h4>@Messages("form.intro")</h4>
+     <ul>
+       @if(contact.info.moreInfo == true) {<li>@Messages("form.info.more")</li>}
+       @if(contact.info.membership == true)  {<li>@Messages("form.info.membership")</li>}
+       @if(contact.info.subscription_small == true) {<li>@Messages("form.info.subscription_small")</li>}
+       @if(contact.info.subscription_large == true) {<li>@Messages("form.info.subscription_large")</li>}
+       @if(contact.info.extraProducts == true) {<li>@Messages("form.info.extraProducts")</li>}
+       @if(contact.info.maillinglist == true) {<li>@Messages("form.info.maillinglist")</li>}
+       @if(contact.info.callme == true) {<li>@Messages("form.info.callme")</li>}
+    </ul>
+      <p>
+      @contact.info.remark.getOrElse("")
+      </p>
+    </div>    
+    <p><a href="@routes.App.home" class="btn" type="button">@Messages("ok")</a></p>
+    
+      <br><br><br>
+}
