@@ -1,7 +1,7 @@
 
 name := "playvision"
 
-version in Global := "0.0.1"
+version in Global := "0.0.2"
 
 name := "playvision"
 
